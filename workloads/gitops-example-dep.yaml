@@ -1,0 +1,30 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitops-example-deployment
+  namespace: gitops-cicd
+  labels:
+    app: gitops-example
+  annotations:
+    # Container Image Automated Updates
+    flux.weave.works/automated: "true"
+    # do not apply this manifest on the cluster
+    #flux.weave.works/ignore: "true"
+spec:
+  selector:
+    matchLabels:
+      app: gitops-example
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: gitops-example
+    spec:
+      containers:
+      - name: gitops-example
+        image: 634072196806.dkr.ecr.cn-north-1.amazonaws.com.cn/gitops-app-demo:8b7a776
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+
