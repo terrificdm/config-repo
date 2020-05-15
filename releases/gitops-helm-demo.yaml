@@ -11,7 +11,7 @@ metadata:
 spec:
   releaseName: gitops-helm-demo
   chart:
-    git: git@github.com:terrificdm/gitops-config
+    git: git@github.com:terrificdm/config-repo
     ref: master
     path: charts/gitops-helm-demo
   values:
