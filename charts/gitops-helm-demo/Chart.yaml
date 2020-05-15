@@ -1,0 +1,7 @@
+apiVersion: v2
+name: gitops-helm-demo
+version: 1.0.0
+description: A Helm chart for GitOps Helm release demo
+maintainers:
+- name: Daoming
+type: application 
