@@ -6,7 +6,7 @@ metadata:
   namespace: gitops-helm
   annotations:
     # Container Image Automated Updates
-    # fluxcd.io/automated: "true"
+    fluxcd.io/automated: "true"
 spec:
   releaseName: gitops-helm-demo
   chart:
