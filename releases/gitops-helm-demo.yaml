@@ -1,14 +1,11 @@
----
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: gitops-helm-demo
   namespace: gitops-helm
   annotations:
-    flux.weave.works/automated: "true"
-    # flux.weave.works/locked: 'true'
-    # flux.weave.works/locked_msg: '"Halt updates for now"'
-    # flux.weave.works/locked_user: User Name <user@example.com>
+    # Container Image Automated Updates
+    fluxcd.io/automated: "true"
 spec:
   releaseName: gitops-helm-demo
   chart:
