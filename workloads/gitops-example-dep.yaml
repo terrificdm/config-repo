@@ -8,11 +8,7 @@ metadata:
     app: gitops-example
   annotations:
     # Container Image Automated Updates
-    # flux.weave.works/automated: "true"
     fluxcd.io/automated: "true"
-    # do not apply this manifest on the cluster
-    #flux.weave.works/ignore: "true"
-    #fluxcd.io/ignore: true
 spec:
   selector:
     matchLabels:
